@@ -27,6 +27,7 @@ public class SemaphoreBlinkingLight : SemaphoreLight
             Light.intensity = 1f;
             yield return new WaitForSeconds(BlinkingTime);
             Light.intensity = .1f;
+            yield return new WaitForSeconds(BlinkingTime);
         }
     }
 }
