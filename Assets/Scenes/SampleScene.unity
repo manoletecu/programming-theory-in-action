@@ -680,12 +680,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 919409861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5260106320e24499adb1eac0c80aa1, type: 3}
+  m_Script: {fileID: 11500000, guid: 56f0e1569202fe44280c9a38785ec7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Light: {fileID: 1846706175}
   Duration: 2
   NextLight: {fileID: 1714348166}
+  BlinkingTime: 0.5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,4 +1481,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Light: {fileID: 651165984}
   Duration: 3
-  NextLight: {fileID: 919409866}
+  NextLight: {fileID: 0}
