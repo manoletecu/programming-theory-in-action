@@ -1,18 +1,21 @@
 using System.Collections;
 using UnityEngine;
 
+//INHERITANCE
 public class SemaphoreBlinkingLight : SemaphoreLight
 {
     public float BlinkingTime = .5f;
-
+    
     private Coroutine _blinkingLightCoroutine;
 
+    //POLYMORPHISM
     public override void TurnOn()
     {
         base.TurnOn();
         _blinkingLightCoroutine = StartCoroutine(BlinkingLightCoroutine());
     }
 
+    //POLYMORPHISM
     public override void TurnOff()
     {
         base.TurnOff();

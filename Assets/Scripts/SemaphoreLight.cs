@@ -9,27 +9,29 @@ public class SemaphoreLight : MonoBehaviour
     [SerializeField]
     public SemaphoreLight NextLight;
 
-    protected bool _isLit;
+    //ENCAPSULATION
+    public bool IsLit { get; protected set; }
 
     public virtual void TurnOn()
     {
-        if (_isLit)
+        if (IsLit)
             return;
 
         Light?.gameObject.SetActive(true);
-        _isLit = true;
+        IsLit = true;
         Invoke("SwitchLight", Duration);
     }
 
     public virtual void TurnOff()
     {
-        if (!_isLit)
+        if (!IsLit)
             return;
 
         Light?.gameObject.SetActive(false);
-        _isLit = false;
+        IsLit = false;
     }
 
+    //ABSTRACTION
     protected void SwitchLight()
     {
         TurnOff();
